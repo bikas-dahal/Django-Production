@@ -45,6 +45,8 @@ THIRD_PARTY_APPS = [
 
 CUSTOM_APPS = [
     'demo',
+    'blog', 
+    'author',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -89,12 +91,26 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'dpg-cpqhshg8fa8c739fqdng-a.oregon-postgres.render.com',
+        'NAME': 'django_j6sk',
+        'USER': 'django_j6sk_user',
+        'PORT': 5432,
+        'PASSWORD': 'kYhyYQUrOInNHkgy8vsmY0pNs5xk7KD9',
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

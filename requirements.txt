@@ -1,2 +1,3 @@
 Django
 django_rest_framework
+psycopg2-binary
